@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ENTJ Subpage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f1f4fb;
+      --card: #ffffff;
+      --accent: #30c5bc;
+      --text: #1f2933;
+      --muted: #6c7a89;
+      --border: #e6ebf2;
+      --shadow: 0 10px 25px rgba(31, 41, 51, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Work Sans', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 32px auto;
+      padding: 0 20px 40px;
+    }
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: flex-start;
+      margin-bottom: 18px;
+    }
+
+    .type-title {
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .badge {
+      padding: 8px 16px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px 18px 20px;
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+    }
+
+    p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .results .row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .function-name {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .percent {
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 14px;
+      min-width: 44px;
+      text-align: right;
+    }
+
+    .bar {
+      height: 11px;
+      width: 100%;
+      background: #e5eef8;
+      border-radius: 999px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bar-fill {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, var(--accent), #8de0d9);
+      border-radius: 999px;
+    }
+
+    .overview-columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    ul {
+      padding-left: 16px;
+      margin: 8px 0;
+      color: var(--muted);
+    }
+
+    ul li { margin-bottom: 6px; }
+
+    .row-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .item-title {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      color: var(--text);
+      margin-top: 8px;
+    }
+
+    table th, table td {
+      text-align: left;
+      padding: 10px 6px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    table th {
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .highlight {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #e7faf8;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 13px;
+      margin-left: 6px;
+    }
+
+    @media (max-width: 820px) {
+      .layout { grid-template-columns: 1fr; }
+      .header { flex-direction: column; align-items: flex-start; }
+      .type-title { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <div class="type-title" aria-label="Personality type">ENTJ</div>
+      <div class="badges" aria-label="Type traits">
+        <span class="badge">Strategic</span>
+        <span class="badge">Decisive</span>
+        <span class="badge">Visionary</span>
+        <span class="badge">Commanding</span>
+      </div>
+    </header>
+
+    <section class="layout" aria-label="ENTJ overview">
+      <article class="card">
+        <h2>Overview</h2>
+        <p>
+          People with ENTJ preferences thrive when they can architect systems, marshal resources,
+          and push ambitious visions forward. They analyze quickly, organize efficiently, and enjoy
+          mobilizing others around a clear direction.
+        </p>
+        <p>
+          ENTJs are at their best when solving complex problems and charting long-term strategy.
+          Their optimism and confidence help teams move past obstacles and keep momentum high.
+        </p>
+
+        <div class="overview-columns">
+          <div>
+            <span class="item-title">What drives them</span>
+            <ul>
+              <li>Turning abstract ideas into executable roadmaps</li>
+              <li>Challenging inefficiencies with bold improvements</li>
+              <li>Leading collaborative teams toward measurable results</li>
+            </ul>
+          </div>
+          <div>
+            <span class="item-title">How they work</span>
+            <ul>
+              <li>Ask direct, incisive questions to reach the crux of issues</li>
+              <li>Delegate decisively and set crisp accountability</li>
+              <li>Balance big-picture thinking with tactical follow-through</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <aside class="card results" aria-label="ENTJ results">
+        <h2>Your Results</h2>
+        <div class="row">
+          <div class="function-name">E - Extraversion</div>
+          <div class="percent">80%</div>
+          <div class="bar" aria-hidden="true"><span class="bar-fill" style="width: 80%"></span></div>
+        </div>
+        <div class="row">
+          <div class="function-name">N - Intuition</div>
+          <div class="percent">70%</div>
+          <div class="bar" aria-hidden="true"><span class="bar-fill" style="width: 70%"></span></div>
+        </div>
+        <div class="row">
+          <div class="function-name">T - Thinking</div>
+          <div class="percent">82%</div>
+          <div class="bar" aria-hidden="true"><span class="bar-fill" style="width: 82%"></span></div>
+        </div>
+        <div class="row">
+          <div class="function-name">J - Judging</div>
+          <div class="percent">76%</div>
+          <div class="bar" aria-hidden="true"><span class="bar-fill" style="width: 76%"></span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="layout" aria-label="Cognitive functions">
+      <article class="card">
+        <h2>Cognitive Functions</h2>
+        <div class="row-grid">
+          <div>
+            <span class="item-title">Dominant — Extraverted Thinking (Te)</span>
+            <p>Leads with efficiency, structure, and evidence-based decision making. Sees logical pathways to goals and drives execution with clarity.</p>
+          </div>
+          <div>
+            <span class="item-title">Auxiliary — Introverted Intuition (Ni)</span>
+            <p>Spots patterns and emerging trends, then synthesizes them into compelling strategies. Anchors the vision that Te brings to life.</p>
+          </div>
+          <div>
+            <span class="item-title">Tertiary — Extraverted Sensing (Se)</span>
+            <p>Welcomes real-time data and crisp sensory details, helping ENTJs adapt plans to what is happening on the ground.</p>
+          </div>
+          <div>
+            <span class="item-title">Inferior — Introverted Feeling (Fi)</span>
+            <p>Connects decisions to personal values. Though quieter, it nudges ENTJs to consider the human impact of their choices.</p>
+          </div>
+        </div>
+      </article>
+
+      <aside class="card" aria-label="Action plan">
+        <h2>Action Plan</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Focus</th>
+              <th>What to try</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Team Alignment</td>
+              <td>Start initiatives with a "why-now" briefing and close with clear ownership and checkpoints.</td>
+            </tr>
+            <tr>
+              <td>Listening</td>
+              <td>Rotate facilitation so quieter voices shape decisions; recap back what you heard before acting.</td>
+            </tr>
+            <tr>
+              <td>Balance</td>
+              <td>Set deliberate reflection time each week to reconnect plans with personal values and wellbeing.</td>
+            </tr>
+            <tr>
+              <td>Growth</td>
+              <td>Seek mentors who challenge your assumptions and introduce alternative strategic models.</td>
+            </tr>
+          </tbody>
+        </table>
+      </aside>
+    </section>
+
+    <section class="card" aria-label="ENTJ snapshot" style="margin-top: 22px;">
+      <h2>ENTJ Snapshot</h2>
+      <div class="row-grid">
+        <div>
+          <span class="item-title">Collaboration style<span class="highlight">Direct</span></span>
+          <p>Drives toward closure, values frank debate, and rallies groups with confident direction.</p>
+        </div>
+        <div>
+          <span class="item-title">Stress signals<span class="highlight">Impatience</span></span>
+          <p>May over-control details or dismiss alternative perspectives when timelines feel threatened.</p>
+        </div>
+        <div>
+          <span class="item-title">Energizers<span class="highlight">Big Challenges</span></span>
+          <p>Hard problems, ambitious milestones, and room to design systems that scale.</p>
+        </div>
+        <div>
+          <span class="item-title">Watchouts<span class="highlight">Tone</span></span>
+          <p>Directness can read as brusque. Pair tough feedback with context and appreciation.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
