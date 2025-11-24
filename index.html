@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENTJ Personality Template</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #191919;
+      --muted: #6f7782;
+      --accent: #3ed3cc;
+      --border: #e7ecf0;
+      --card: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 30px auto 60px;
+      padding: 0 22px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 28px;
+      align-items: start;
+      margin-bottom: 26px;
+    }
+
+    .title-block h1 {
+      margin: 0 0 10px;
+      font-size: 64px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .chip {
+      display: inline-flex;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    }
+
+    .chip.peach { background: #ffe7e2; }
+    .chip.pink { background: #ffd7f0; }
+    .chip.yellow { background: #fff3cf; }
+    .chip.green { background: #def6ea; }
+
+    .subtitle {
+      margin: 0;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.2px;
+      font-size: 14px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 18px 20px;
+      box-shadow: 0 12px 30px rgba(17, 24, 39, 0.08);
+    }
+
+    .results h2 {
+      margin: 0 0 12px;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .result-row {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 14px;
+      font-weight: 600;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .result-row:last-child { margin-bottom: 0; }
+
+    .bar {
+      position: relative;
+      height: 11px;
+      width: 100%;
+      background: #e6f6f8;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .bar span {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, #43d6d1, #6fe6df);
+      border-radius: 999px;
+    }
+
+    .result-label { display: flex; align-items: center; gap: 4px; }
+    .result-label::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #7beae1;
+    }
+
+    .result-tag {
+      font-weight: 600;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: right;
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 28px;
+    }
+
+    h3 {
+      margin: 0 0 12px;
+      font-size: 16px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    p { margin: 0 0 12px; color: var(--muted); font-weight: 400; }
+
+    ul { margin: 10px 0 0; padding-left: 18px; color: var(--muted); }
+    li { margin-bottom: 6px; }
+
+    .cog-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 12px;
+    }
+
+    .cog-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 4px solid #d7f5f3;
+      box-shadow: inset 0 0 0 3px var(--accent);
+      margin-top: 2px;
+    }
+
+    .cog-item h4 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: var(--text);
+    }
+
+    .cog-item p { margin: 4px 0 0; font-size: 13px; }
+
+    @media (max-width: 900px) {
+      .hero, .grid-two { grid-template-columns: 1fr; }
+      .title-block h1 { font-size: 48px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="title-block">
+        <h1>ENTJ</h1>
+        <div class="chips" aria-label="type traits">
+          <span class="chip peach">Fun</span>
+          <span class="chip pink">Warm</span>
+          <span class="chip yellow">Energetic</span>
+          <span class="chip green">People</span>
+        </div>
+        <p class="subtitle">Extraverted Intuitive Thinking Judging</p>
+      </div>
+
+      <aside class="card results" aria-label="Your results">
+        <h2>Your Results ></h2>
+        <div class="result-row">
+          <div class="result-label">E -</div>
+          <div class="result-tag">Crystal</div>
+          <div class="bar" aria-hidden="true"><span style="width: 85%"></span></div>
+        </div>
+        <div class="result-row">
+          <div class="result-label">N -</div>
+          <div class="result-tag">Crystal</div>
+          <div class="bar" aria-hidden="true"><span style="width: 78%"></span></div>
+        </div>
+        <div class="result-row">
+          <div class="result-label">T -</div>
+          <div class="result-tag">Diffuse</div>
+          <div class="bar" aria-hidden="true"><span style="width: 64%"></span></div>
+        </div>
+        <div class="result-row">
+          <div class="result-label">J -</div>
+          <div class="result-tag">Linear</div>
+          <div class="bar" aria-hidden="true"><span style="width: 72%"></span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="grid-two" aria-label="details">
+      <article class="card">
+        <h3>Overview</h3>
+        <p>People with ENTJ preferences are natural strategists. They enjoy stepping back to map the big picture, identify patterns others miss, and move ideas into decisive action.</p>
+        <ul>
+          <li>ENTJs excel at directing teams toward ambitious milestones.</li>
+          <li>They make quick calls, iterate fast, and keep momentum high.</li>
+          <li>They value candor, structure, and clear ownership.</li>
+        </ul>
+      </article>
+
+      <aside class="card">
+        <h3>Cognitive Functions</h3>
+        <div class="cog-list">
+          <div class="cog-item">
+            <div class="icon" aria-hidden="true"></div>
+            <div>
+              <h4>Dominant</h4>
+              <p>Extraverted Thinking (Te)</p>
+            </div>
+          </div>
+          <div class="cog-item">
+            <div class="icon" aria-hidden="true"></div>
+            <div>
+              <h4>Auxiliary</h4>
+              <p>Introverted Intuition (Ni)</p>
+            </div>
+          </div>
+          <div class="cog-item">
+            <div class="icon" aria-hidden="true"></div>
+            <div>
+              <h4>Tertiary</h4>
+              <p>Extraverted Sensing (Se)</p>
+            </div>
+          </div>
+          <div class="cog-item">
+            <div class="icon" aria-hidden="true"></div>
+            <div>
+              <h4>Inferior</h4>
+              <p>Introverted Feeling (Fi)</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>
